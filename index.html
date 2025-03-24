@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <title>Untitled Visualization | Flourish</title>
+
+  <!-- 移除 OneTrust Cookie 提示脚本 -->
+  <!--
+  <script src="https://cdn-au.onetrust.com/consent/xxx/OtAutoBlock.js"></script>
+  <script src="https://cdn-au.onetrust.com/consent/xxx/otSDKStub.js"></script>
+  -->
+
+  <link rel="stylesheet" type="text/css" href="https://public.flourish.studio/resources/showcase.css">
+  <script data-ot-ignore src="https://public.flourish.studio/resources/showcase.js" charset="utf-8"></script>
+
+  <style>
+    /* 覆盖默认样式，让可视化全宽 */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .showcase-visualisation .content,
+    .showcase-visualisation .content .row.showcase,
+    .showcase-visualisation .content .row.showcase .preview-container {
+      max-width: none !important;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .flourish-embed {
+      width: 100% !important;
+      height: 600px; /* 可根据需求修改高度 */
+    }
+    /* 如果仍有残余 Cookie 提示，强制隐藏 */
+    .ot-floating-button,
+    .ot-sdk-container,
+    .ot-sdk-cookie-policy {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="showcase-visualisation">
+  <!-- 保留头部 -->
+  <div class="row header showcase-header">
+    <a href="https://app.flourish.studio/" class="logo clickable menu-item">
+      <img class="logo-desktop" data-target="home" src="https://public.flourish.studio/resources/images/logo.svg" alt="Flourish logo">
+      <img class="logo-mobile" data-target="home" src="https://public.flourish.studio/resources/bosh.svg" alt="Flourish logo">
+    </a>
+    <div class="project-title">
+      <h1>个人GMV完成率</h1>
+      <h2>By <a href="#">shentiam</a> on 3 Mar 2025</h2>
+    </div>
+    <div class="action-buttons">
+      <!-- 如果需要分享按钮等可以保留 -->
+    </div>
+  </div>
+
+  <!-- 中间内容 -->
+  <div class="content">
+    <div class="row showcase">
+      <div class="preview-container">
+        <!-- 交互式可视化 (Flourish) -->
+        <div class="flourish-embed" data-src="visualisation/21656069"></div>
+      </div>
+      <!-- 如果不想显示 credits，也可以删除这个区块 -->
+      <div id="credits" class="credits-text">
+        <h2>Template credits</h2>
+        <a href="#">Bar chart race</a> by <strong>Flourish team</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- 已删除底部 .row.footer 区块 -->
+
+  <!-- 引入 Flourish 的脚本并初始化可视化 -->
+  <script src="https://public.flourish.studio/resources/embed.js"></script>
+  <script>
+    Flourish.initShowcaseVisualisation(
+      "https://public.flourish.studio/", //
